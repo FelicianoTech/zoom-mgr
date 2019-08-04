@@ -1,0 +1,46 @@
+version: 2.1
+
+workflows:
+  main:
+    jobs:
+      - build
+  daily:
+    triggers:
+      - schedule:
+          cron: "30 9 * * *"
+          filters:
+            branches:
+              only: master
+    jobs:
+      - check-zoom-version
+
+jobs:
+  build:
+    docker:
+      - image: cibuilds/base:2019.08
+    steps:
+      - checkout
+      - run:
+          name: "Add Tests Here Soon"
+          command: echo "Update this job with tests in the future."
+  check-zoom-version:
+    docker:
+      - image: cimg/base:2019.08
+    steps:
+      - checkout
+      - run:
+          name: "Check if there's a new Zoom version"
+          command: |
+            ./update-zoom-version.sh
+
+            if git status | grep -q "working tree clean"; then
+              echo "No changes, exiting."
+              exit
+            fi
+
+            git config --global user.email "Ricardo@Feliciano.Tech"
+            git config --global user.name "Ricardo N Feliciano"
+
+            git add ./ZOOM_VERSION
+            git commit -m "Adding new Zoom version."
+            git push
