@@ -11,7 +11,7 @@ install_zoom(){
 			pkgs="libgl1-mesa-glx libxcb-xtest0"
 			;;
 		disco)
-			pkgs="libxcb-xtest0"
+			pkgs="libgl1-mesa-glx libxcb-xtest0"
 			;;
 		*)
 			echo "Your operating system is unsupported."
