@@ -24,7 +24,7 @@ install_zoom(){
 
 	wget -O /tmp/zoom.deb https://zoom.us/client/latest/zoom_amd64.deb
 	sudo apt-get update && sudo apt-get install -y $pkgs
-	sudo dpkg -i /tmp/zoom.deb
+	sudo dpkg -i /tmp/zoom.deb || echo "Install failed, uninstalling the broken package..." && sudo apt-get purge zoom
 }
 
 update_zoom(){
