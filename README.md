@@ -39,6 +39,11 @@ Installs the Zoom Linux Client on your machine.
 If a newer version of Zoom is available, download and install it.
 
 
+## Updating Zoom Manager
+
+At the moment there isn't any separate update command. To update Zoom Manager itself (not Zoom), just re-install it with the same instructions from the "Installation" section above. The `chmod` line won't be needed for the upgrade.
+
+
 ## Development
 
 Instructions coming in the future.
