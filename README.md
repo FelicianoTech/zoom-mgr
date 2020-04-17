@@ -6,8 +6,13 @@ conferencing software on Ubuntu easier.
 
 ## Requirements
 
-This project supports 64-bit desktop installations of Ubuntu 18.04 "Bionic" 
-and Ubuntu 19.04 "Disco".
+This project supports 64-bit desktop installations of Ubuntu.
+Specifically, these Ubuntu releases:
+
+- Ubuntu 18.04 "Bionic" 
+- Ubuntu 19.10 "Eoan"
+- Ubuntu 20.04 "Focal"
+
 For 32-bit support or other distros, please open a Pull Request or Issue.
 
 
@@ -36,12 +41,17 @@ Installs the Zoom Linux Client on your machine.
 ~/zoom-mgr.sh update
 ```
 
-If a newer version of Zoom is available, download and install it.
+If a newer version of Zoom or Zoom Manager is available, download and install it.
 
 
 ## Updating Zoom Manager
 
-At the moment there isn't any separate update command. To update Zoom Manager itself (not Zoom), just re-install it with the same instructions from the "Installation" section above. The `chmod` line won't be needed for the upgrade.
+Zoom Manager v0.5.0 and newer (April 16th, 2020) will update itself when running `./zoom-mgr.sh update`.
+Older releases will not.
+For older releases, to update Zoom Manager itself (not Zoom), just re-install it with the same instructions from the "Installation" section above.
+The `chmod` line won't be needed for the upgrade.
+
+Once you've updated to Zoom Manager v0.5.0 or later, you can update Zoom and Zoom Manager at the same time with the `update` command.
 
 
 ## Development
