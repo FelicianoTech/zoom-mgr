@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-zoomMGRVersion="0.4.1"
+zoomMGRVersion="0.5.0"
 
 install_zoom(){
 
@@ -57,6 +57,26 @@ update_zoom(){
 	fi
 }
 
+update_zoomMGR(){
+
+	latestVersion=$(curl -s "https://raw.githubusercontent.com/felicianotech/zoom-mgr/master/VERSION")
+
+	if [ -z "$latestVersion" ]; then
+		echo "Failed to retrieve latest version of Zoom Manager."
+		echo "Try again later or report an issue at: https://github.com/felicianotech/zoom-mgr/issues"
+		exit 1
+	fi
+
+	if [ "$zoomMGRVersion" = "$latestVersion" ]; then
+		echo "You are already using the latest version of Zoom Manager, skipping."
+	else
+		echo "Zoom Manager v${latestVersion} is available. Installing update."
+		myPath=`dirname "$0"`
+		myFilename=`basename "$0"`
+		curl "https://raw.githubusercontent.com/felicianotech/zoom-mgr/master/zoom-mgr.sh" -o "${myPath}/${myFilename}"
+	fi
+}
+
 action=$1
 
 case $action in
@@ -71,6 +91,7 @@ case $action in
 		install_zoom
 		;;
 	update)
+		update_zoomMGR
 		update_zoom
 		;;
 	*)
