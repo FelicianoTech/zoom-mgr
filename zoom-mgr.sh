@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+zoomMGRVersion="0.4.1"
+
 install_zoom(){
 
 	osID=$(grep -e "^ID=" /etc/os-release | cut -c4-)
@@ -59,7 +61,7 @@ action=$1
 
 case $action in
 	"--version")
-		echo "zoom-mgr v0.1.0"
+		echo "zoom-mgr v${zoomMGRVersion}"
 		;;
 	install)
 		if dpkg -s zoom &> /dev/null; then
