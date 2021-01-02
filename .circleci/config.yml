@@ -4,6 +4,12 @@ workflows:
   main:
     jobs:
       - build
+      - test-on-ubuntu:
+          matrix:
+            parameters:
+              ubuntuVersion:
+                - "18.04"
+                - "20.04"
   daily:
     triggers:
       - schedule:
@@ -13,6 +19,12 @@ workflows:
               only: master
     jobs:
       - check-zoom-version
+      - test-on-ubuntu:
+          matrix:
+            parameters:
+              ubuntuVersion:
+                - "18.04"
+                - "20.04"
 
 jobs:
   build:
@@ -23,9 +35,25 @@ jobs:
       - run:
           name: "Add Tests Here Soon"
           command: echo "Update this job with tests in the future."
+  test-on-ubuntu:
+    parameters:
+      ubuntuVersion:
+        type: string
+    docker:
+      - image: cimg/base:2020.12-<< parameters.ubuntuVersion >>
+    steps:
+      - checkout
+      - run:
+          name: "Setup Ubuntu Desktop"
+          command: sudo apt-get update && sudo apt-get install -y ubuntu-desktop
+      - run:
+          name: "Try installing Zoom"
+          command: |
+            sudo ./zoom-mgr.sh install
+            which zoom
   check-zoom-version:
     docker:
-      - image: cimg/base:2019.08
+      - image: cibuilds/base:2019.08
     steps:
       - checkout
       - run:
