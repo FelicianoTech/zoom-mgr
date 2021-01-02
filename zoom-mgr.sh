@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-zoomMGRVersion="0.5.0"
+zoomMGRVersion="0.6.0"
 
 install_zoom(){
 
@@ -10,7 +10,11 @@ install_zoom(){
 
 	case $osCodename in
 		bionic)
-			pkgs="libgl1-mesa-glx libxcb-xtest0"
+			pkgs="\
+				libegl1-mesa \
+				libgl1-mesa-glx \
+				libxcb-xinerama0 \
+				libxcb-xtest0"
 			;;
 		disco)
 			pkgs="libgl1-mesa-glx libxcb-xtest0"
@@ -19,7 +23,11 @@ install_zoom(){
 			pkgs="libgl1-mesa-glx libxcb-xtest0"
 			;;
 		focal)
-			pkgs="libegl1-mesa libgl1-mesa-glx libxcb-xtest0"
+			pkgs="\
+				libegl1-mesa \
+				libgl1-mesa-glx \
+				libxcb-xinerama0 \
+				libxcb-xtest0"
 			;;
 		*)
 			echo "Your operating system is unsupported."
