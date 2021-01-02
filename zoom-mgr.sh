@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-zoomMGRVersion="0.6.0"
+zoomMGRVersion="0.7.0"
 
 install_zoom(){
 
@@ -16,13 +16,14 @@ install_zoom(){
 				libxcb-xinerama0 \
 				libxcb-xtest0"
 			;;
-		disco)
-			pkgs="libgl1-mesa-glx libxcb-xtest0"
-			;;
-		eoan)
-			pkgs="libgl1-mesa-glx libxcb-xtest0"
-			;;
 		focal)
+			pkgs="\
+				libegl1-mesa \
+				libgl1-mesa-glx \
+				libxcb-xinerama0 \
+				libxcb-xtest0"
+			;;
+		groovy)
 			pkgs="\
 				libegl1-mesa \
 				libgl1-mesa-glx \
