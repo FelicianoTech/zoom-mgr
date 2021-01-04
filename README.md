@@ -10,8 +10,9 @@ This project supports 64-bit desktop installations of Ubuntu.
 Specifically, these Ubuntu releases:
 
 - Ubuntu 18.04 "Bionic" 
-- Ubuntu 19.10 "Eoan"
 - Ubuntu 20.04 "Focal"
+- Ubuntu 20.10 "Groovy"
+- Ubuntu Hirsute Hippo
 
 For 32-bit support or other distros, please open a Pull Request or Issue.
 
