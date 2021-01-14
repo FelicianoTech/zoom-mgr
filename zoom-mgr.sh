@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-zoomMGRVersion="0.9.0"
+zoomMGRVersion="0.9.1"
 
 install_zoom(){
 
@@ -10,40 +10,16 @@ install_zoom(){
 
 	case $osCodename in
 		bionic)
-			pkgs="\
-				ibus \
-				libegl1-mesa \
-				libgl1-mesa-glx \
-				libxcb-xinerama0 \
-				libxcb-xtest0 \
-			"
+			pkgs="ibus libegl1-mesa libgl1-mesa-glx libxcb-xinerama0 libxcb-xtest0"
 			;;
 		focal)
-			pkgs="\
-				ibus \
-				libegl1-mesa \
-				libgl1-mesa-glx \
-				libxcb-xinerama0 \
-				libxcb-xtest0 \
-			"
+			pkgs="ibus libegl1-mesa libgl1-mesa-glx libxcb-xinerama0 libxcb-xtest0"
 			;;
 		groovy)
-			pkgs="\
-				ibus \
-				libegl1-mesa \
-				libgl1-mesa-glx \
-				libxcb-xinerama0 \
-				libxcb-xtest0 \
-			"
+			pkgs="ibus libegl1-mesa libgl1-mesa-glx libxcb-xinerama0 libxcb-xtest0"
 			;;
 		hirsute)
-			pkgs="\
-				ibus \
-				libegl1-mesa \
-				libgl1-mesa-glx \
-				libxcb-xinerama0 \
-				libxcb-xtest0 \
-			"
+			pkgs="ibus libegl1-mesa libgl1-mesa-glx libxcb-xinerama0 libxcb-xtest0"
 			;;
 		*)
 			echo "Your operating system is unsupported."
