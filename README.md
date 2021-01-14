@@ -6,13 +6,14 @@ conferencing software on Ubuntu easier.
 
 ## Requirements
 
-This project supports 64-bit desktop installations of Ubuntu.
-Specifically, these Ubuntu releases:
+This project supports 64-bit desktop installations of Ubuntu and Linux Mint.
+Specifically, these releases:
 
 - Ubuntu 18.04 "Bionic" 
 - Ubuntu 20.04 "Focal"
 - Ubuntu 20.10 "Groovy"
 - Ubuntu Hirsute Hippo
+- Linux Mint v19+
 
 For 32-bit support or other distros, please open a Pull Request or Issue.
 
