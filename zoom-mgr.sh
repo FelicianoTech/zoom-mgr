@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 
-zoomMGRVersion="0.8.0"
+zoomMGRVersion="0.9.0"
 
 install_zoom(){
 
 	osID=$(grep -e "^ID=" /etc/os-release | cut -c4-)
-	osCodename=$(grep -e "^VERSION_CODENAME=" /etc/os-release | cut -c18-)
+	osCodename=$(grep -e "^UBUNTU_CODENAME=" /etc/os-release | cut -c17-)
 	pkgs=""
 
 	case $osCodename in
 		bionic)
 			pkgs="\
+				ibus \
 				libegl1-mesa \
 				libgl1-mesa-glx \
 				libxcb-xinerama0 \
@@ -19,6 +20,7 @@ install_zoom(){
 			;;
 		focal)
 			pkgs="\
+				ibus \
 				libegl1-mesa \
 				libgl1-mesa-glx \
 				libxcb-xinerama0 \
@@ -27,6 +29,7 @@ install_zoom(){
 			;;
 		groovy)
 			pkgs="\
+				ibus \
 				libegl1-mesa \
 				libgl1-mesa-glx \
 				libxcb-xinerama0 \
@@ -35,6 +38,7 @@ install_zoom(){
 			;;
 		hirsute)
 			pkgs="\
+				ibus \
 				libegl1-mesa \
 				libgl1-mesa-glx \
 				libxcb-xinerama0 \
