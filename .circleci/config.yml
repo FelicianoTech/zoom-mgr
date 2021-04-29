@@ -16,7 +16,7 @@ workflows:
           cron: "30 9 * * *"
           filters:
             branches:
-              only: master
+              only: trunk
     jobs:
       - check-zoom-version
       - test-on-ubuntu:
