@@ -21,6 +21,9 @@ install_zoom(){
 		hirsute)
 			pkgs="ibus libegl1-mesa libgl1-mesa-glx libxcb-xinerama0 libxcb-xtest0"
 			;;
+		impish)
+			pkgs="ibus libegl1-mesa libgl1-mesa-glx libxcb-xinerama0 libxcb-xtest0"
+			;;
 		*)
 			echo "Your operating system is unsupported."
 			exit 1

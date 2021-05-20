@@ -13,6 +13,7 @@ Specifically, these releases:
 - Ubuntu 20.04 "Focal"
 - Ubuntu 20.10 "Groovy"
 - Ubuntu 21.04 "Hirsute"
+- Ubuntu Impish Idri
 - Linux Mint v19+
 
 For 32-bit support or other distros, please open a Pull Request or Issue.
