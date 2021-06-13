@@ -1,4 +1,4 @@
-# Zoom Manager (`zoom-mgr`) [![CircleCI Build Status](https://circleci.com/gh/felicianotech/zoom-mgr.svg?style=shield)](https://circleci.com/gh/felicianotech/zoom-mgr) [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/felicianotech/zoom-mgr/master/LICENSE)
+# Zoom Manager (`zoom-mgr`) [![CircleCI Build Status](https://circleci.com/gh/felicianotech/zoom-mgr.svg?style=shield)](https://circleci.com/gh/felicianotech/zoom-mgr) [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/felicianotech/zoom-mgr/trunk/LICENSE)
 
 `zoom-mgr` is a script that makes installing and updating the Zoom video 
 conferencing software on Ubuntu easier.
@@ -27,7 +27,7 @@ Here's a typical install:
 
 ```
 cd ~
-curl -O https://raw.githubusercontent.com/felicianotech/zoom-mgr/master/zoom-mgr.sh
+curl -O https://raw.githubusercontent.com/felicianotech/zoom-mgr/trunk/zoom-mgr.sh
 chmod +x ~/zoom-mgr.sh
 ```
 
