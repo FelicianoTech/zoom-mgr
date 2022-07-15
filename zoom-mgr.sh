@@ -15,13 +15,13 @@ install_zoom(){
 		focal)
 			pkgs="ibus libegl1-mesa libgl1-mesa-glx libxcb-xinerama0 libxcb-xtest0"
 			;;
-		groovy)
-			pkgs="ibus libegl1-mesa libgl1-mesa-glx libxcb-xinerama0 libxcb-xtest0"
-			;;
-		hirsute)
-			pkgs="ibus libegl1-mesa libgl1-mesa-glx libxcb-xinerama0 libxcb-xtest0"
-			;;
 		impish)
+			pkgs="ibus libegl1-mesa libgl1-mesa-glx libxcb-xinerama0 libxcb-xtest0"
+			;;
+		jammy)
+			pkgs="ibus libegl1-mesa libgl1-mesa-glx libxcb-xinerama0 libxcb-xtest0"
+			;;
+		kinetic)
 			pkgs="ibus libegl1-mesa libgl1-mesa-glx libxcb-xinerama0 libxcb-xtest0"
 			;;
 		*)
