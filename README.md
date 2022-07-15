@@ -11,8 +11,8 @@ Specifically, these releases:
 
 - Ubuntu 18.04 "Bionic" 
 - Ubuntu 20.04 "Focal"
-- Ubuntu 20.10 "Groovy"
-- Ubuntu 21.04 "Hirsute"
+- Ubuntu 22.04 "Jammy"
+- Ubuntu 22.10 "Kinetic"
 - Ubuntu Impish Idri
 - Linux Mint v19+
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-zoomMGRVersion="0.10.1"
+zoomMGRVersion="0.11.0"
 
 install_zoom(){
 
