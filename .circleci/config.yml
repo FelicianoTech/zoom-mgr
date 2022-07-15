@@ -10,6 +10,7 @@ workflows:
               ubuntuVersion:
                 - "18.04"
                 - "20.04"
+                - "22.04"
   daily:
     triggers:
       - schedule:
@@ -30,7 +31,7 @@ workflows:
 jobs:
   build:
     docker:
-      - image: cimg/base:2022.04
+      - image: cimg/base:2022.06
     steps:
       - checkout
       - run:
@@ -41,7 +42,7 @@ jobs:
       ubuntuVersion:
         type: string
     docker:
-      - image: cimg/base:2022.04-<< parameters.ubuntuVersion >>
+      - image: cimg/base:2022.06-<< parameters.ubuntuVersion >>
     steps:
       - checkout
       - run:
@@ -54,7 +55,7 @@ jobs:
             which zoom
   check-zoom-version:
     docker:
-      - image: cimg/base:2022.04
+      - image: cimg/base:2022.06
     steps:
       - checkout
       - run:
