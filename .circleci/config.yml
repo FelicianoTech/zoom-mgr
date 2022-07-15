@@ -25,11 +25,12 @@ workflows:
               ubuntuVersion:
                 - "18.04"
                 - "20.04"
+                - "22.04"
 
 jobs:
   build:
     docker:
-      - image: cimg/base:2021.04
+      - image: cimg/base:2022.04
     steps:
       - checkout
       - run:
@@ -40,7 +41,7 @@ jobs:
       ubuntuVersion:
         type: string
     docker:
-      - image: cimg/base:2021.04-<< parameters.ubuntuVersion >>
+      - image: cimg/base:2022.04-<< parameters.ubuntuVersion >>
     steps:
       - checkout
       - run:
@@ -53,7 +54,7 @@ jobs:
             which zoom
   check-zoom-version:
     docker:
-      - image: cimg/base:2021.04
+      - image: cimg/base:2022.04
     steps:
       - checkout
       - run:
